@@ -17,4 +17,9 @@
     
     Chai Chains:
         Symantec word chain examples and docs can be found at the Chai Assertion Library 
+
+    Sinon:
+        Creates a fake server to serve specified data to emulate/test client responses
+        Spies:  Check that specified functions are called with specified parameters 
+        
         
