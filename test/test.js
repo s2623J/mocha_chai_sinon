@@ -3,7 +3,9 @@ var expect = require('chai').expect;
 var assert = require('chai').assert;
 var sinon = require("sinon");
 var Add = require('../math');
-var Add_Sinon = require('../math').Add_Sinon;
+var Add_Sinon = Add.Add_Sinon;
+var isAlive = Add.isAlive;
+
 
 describe('Addition Tests', function() {
     it('should return 3 when passed values one and two', function () {

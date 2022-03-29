@@ -9,3 +9,15 @@ module.exports.Add_Sinon = function (numberOne, numberTwo, log) {
     log(result);
     return result;
 }
+
+module.exports.isAlive = function (ping) {
+    var pingOneSuccess = ping();
+    var pingOneSuccess = ping();
+    var pingOneSuccess = ping();
+
+    if (pingOneSuccess && pingOneSuccess && pingOneSuccess) {
+        return true;
+    }
+
+    return false;
+}
