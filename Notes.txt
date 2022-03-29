@@ -1,0 +1,20 @@
+
+    Notes:
+    ------
+    Modules:    Every module should have a suite of unit tests
+    TDD:        Test Driven Development
+
+    Mocha Workflow:
+        Red:    Write a test and make it fail
+        Green:  Make test pass with minimal code
+        Amber:  Cleanup, re-run tests, don't change behavior
+
+    Every Suite will be encapsulated by a describe function taking two parameters - a string, 
+        and function. ie:
+            describe('Addition Tests', function() {
+                
+            })
+    
+    Chai Chains:
+        Symantec word chain examples and docs can be found at the Chai Assertion Library 
+        

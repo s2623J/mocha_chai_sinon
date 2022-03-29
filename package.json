@@ -1,0 +1,18 @@
+{
+  "name": "mocha_chai_sinon",
+  "version": "1.0.0",
+  "description": "Unit testing refresher course",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
+  }
+}
