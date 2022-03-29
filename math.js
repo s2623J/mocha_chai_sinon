@@ -21,3 +21,24 @@ module.exports.isAlive = function (ping) {
 
     return false;
 }
+
+module.exports.API = {
+    isAlive: function() {
+        try {
+            var pingOneSuccess = this.Ping();
+            var pingTwoSuccess = this.Ping();
+            var pingThreeSuccess = this.Ping();
+        } catch (error) {
+            return new Error('Ping threw new exception');
+        }
+    
+        if (pingOneSuccess && pingTwoSuccess && pingThreeSuccess) {
+            return true;
+        }
+    
+        return false;
+    },
+    Ping: function() {
+        return true;
+    }
+}

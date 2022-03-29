@@ -5,6 +5,7 @@ var sinon = require("sinon");
 var Add = require('../math');
 var Add_Sinon = Add.Add_Sinon;
 var isAlive = Add.isAlive;
+var API = Add.API;
 
 
 describe('Addition Tests', function() {
@@ -60,5 +61,14 @@ describe('IsAlive Tests', function() {
         let websiteIsAlive = isAlive(pinger);
         websiteIsAlive.should.be.false;  // Confirms that pinger(stub object that returns 
                                          // a false value) executed successfully in the called function
+    })
+
+    it('should call ping 3 times', function() {
+        let mockAPI = sinon.mock(API);
+        mockAPI.expects('Ping').exactly(3);
+
+        API.isAlive();
+
+        mockAPI.verify();
     })
 })

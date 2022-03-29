@@ -21,5 +21,6 @@
     Sinon:
         Creates a fake server to serve specified data to emulate/test client responses
         Spies:  Check that specified functions are called with specified parameters 
-        
+        Stub:   Fake object
+        Mocks:  Fake method
         
