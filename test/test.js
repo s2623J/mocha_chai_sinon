@@ -41,3 +41,24 @@ describe('Spy Tests', function() {
         assert(logSpy.calledWith(3).should.be.true); // Asserts logSpy logs the number 3
     })
 })
+
+describe('IsAlive Tests', function() {
+    it('should return true when ping called', function() {
+        let pinger = sinon.stub();
+        pinger.returns(true);
+        let websiteIsAlive = isAlive(pinger);
+        websiteIsAlive.should.be.true;  // Confirms that pinger(stub object that returns 
+                                        // a true value) executed successfully in the called function
+    })
+
+    it('should return false when ping does NOT return true three times', function() {
+        let pinger = sinon.stub();
+        pinger.onFirstCall().returns(true);
+        pinger.onSecondCall().returns(false);
+        pinger.onThirdCall().returns(true);
+
+        let websiteIsAlive = isAlive(pinger);
+        websiteIsAlive.should.be.false;  // Confirms that pinger(stub object that returns 
+                                         // a false value) executed successfully in the called function
+    })
+})

@@ -12,10 +12,10 @@ module.exports.Add_Sinon = function (numberOne, numberTwo, log) {
 
 module.exports.isAlive = function (ping) {
     var pingOneSuccess = ping();
-    var pingOneSuccess = ping();
-    var pingOneSuccess = ping();
+    var pingTwoSuccess = ping();
+    var pingThreeSuccess = ping();
 
-    if (pingOneSuccess && pingOneSuccess && pingOneSuccess) {
+    if (pingOneSuccess && pingTwoSuccess && pingThreeSuccess) {
         return true;
     }
 
